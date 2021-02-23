@@ -72,7 +72,7 @@ class HarryPotter(pygame.sprite.Sprite):  #Harry Potter (player)
                 self.image.set_colorkey((255, 255, 255), RLEACCEL)
                 surf.blit(self.image,self.rect)
                 pygame.display.update()
-                clock.tick(20)
+                # clock.tick(20)
                 self.image.fill(COLOR)
                 surf.blit(self.image,self.rect)
                 pygame.display.update()
@@ -121,7 +121,7 @@ class Ghost(pygame.sprite.Sprite):    #Ghost (enemy)
         self.rect.move_ip(velx*a,vely*a)
         
         if self.health==0:
-            print("Ghost killed!")
+            # print("Ghost killed!")
             self.kill()
 
 

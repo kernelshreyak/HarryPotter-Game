@@ -73,8 +73,8 @@ while run:
         player.health -= 20
 
     if player.health==0:
-        print("Harry is DEAD!!! Resetting....")
-        player.health = 100
+        # TODO: show game over screen
+        pass
         
     pygame.display.flip()
     
