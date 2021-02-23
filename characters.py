@@ -111,17 +111,17 @@ class Ghost(pygame.sprite.Sprite):    #Ghost (enemy)
         self.image=pygame.image.load("sprites/ghost.png").convert()
         self.image.set_colorkey((255, 255, 255), RLEACCEL)
         self.rect = self.image.get_rect()
-        self.rect = self.image.get_rect(
-            center=(random.randint(0,2)*350, random.randint(0,2)*250))
+        self.rect = self.image.get_rect(center=(random.randint(0,2)*350, random.randint(0,2)*250))
         self.health=200
         
     def move(self,target):
-        a=random.randint(-1,1)
+        a = 0.1
         velx=10
         vely=10
-        self.rect.move_ip(velx*random.randint(-1,1),vely*random.randint(-1,1))
+        self.rect.move_ip(velx*a,vely*a)
         
         if self.health==0:
+            print("Ghost killed!")
             self.kill()
 
 
